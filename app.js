@@ -24,13 +24,38 @@ for (let i = 0; i < 12; i++) {
 for (let i = 0; i < 12; i++) {
     const div1 = document.createElement("div")
     const img1 = document.createElement("img")
-    img1.setAttribute("data-type", "sky")
-    img1.src = "images/sky1.png"
-    img1.alt = "sky";
+    img1.setAttribute("data-type", "tree_trunk")
+    img1.addEventListener("click", function (event) {
+        const type = event.target.getAttribute("data-type")
+        if (tool === "axe") {
+            if (type === "tree_trunk") {
+                event.target.src = "images/smily3.jpg"
+            }
+        }
+    });
+    img1.src = "images/tree trunk.png"
+    img1.alt = "tree";
     div1.appendChild(img1);
     board1.appendChild(div1);
 }
-for (let i = 0; i < 18; i++) {
+for (let i = 0; i < 12; i++) {
+    const div1 = document.createElement("div")
+    const img1 = document.createElement("img")
+    img1.setAttribute("data-type", "stone")
+    img1.addEventListener("click", function (event) {
+        const type = event.target.getAttribute("data-type")
+        if (tool === "pickaxe") {
+            if (type === "stone") {
+                event.target.src = "images/smily4.jpg"
+            }
+        }
+    });
+    img1.src = "images/stone.jpg"
+    img1.alt = "stone";
+    div1.appendChild(img1);
+    board1.appendChild(div1);
+}
+for (let i = 0; i < 12; i++) {
     const div1 = document.createElement("div")
     const img1 = document.createElement("img")
     img1.setAttribute("data-type", "ground")
